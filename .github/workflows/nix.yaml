@@ -18,10 +18,3 @@ jobs:
             # If you chose API tokens for write access OR if you have a private cache
             authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
         - run: nix build
-        - uses: crazy-max/ghaction-github-pages@v2
-          with:
-             build_dir: result
-             target_branch: gh-pages
-             keep_history: true
-          env:
-             GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
